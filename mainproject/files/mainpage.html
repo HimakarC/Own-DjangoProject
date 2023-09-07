@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <span>Hello, {{user.first_name}}</span>&nbsp;&nbsp;&nbsp;
+    <a href="newone/logout">Logout</a>
+    {% else %}
+        <li><a href="newone/register">Register</a></li>
+        <li><a href="newone/login">Login</a></li>
+    {% endif %}
+    </body>
+</html>
